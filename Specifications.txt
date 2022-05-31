@@ -1,0 +1,10 @@
+This file contains information about our database schema and contains details about the different tables created.
+
+username table:
+ID is made the primary key.
+
+user_details table:
+ID is the primary key.
+birthday default date is the CURRENT_DATE.
+
+Used JSONPATH in Review and Posts table.

@@ -1,0 +1,18 @@
+CREATE TABLE PROF_DETAILS(
+    ID bigint primary key,
+    FULL_NAME varchar(255) NOT NULL,
+    UNIVERSITY varchar(255) NOT NULL,
+    Department varchar(255) NOT NULL,
+    Avg_Rating DECIMAL NOT NULL
+);
+
+
+
+
+CREATE TABLE user_details(
+ID bigint primary key,
+FULL_NAME varchar(255) NOT NULL,
+COLLEGE_YEAR int NOT NULL,
+BIRTHDAY DATE NOT NULL DEFAULT CURRENT_DATE,
+MAJOR varchar(255) NOT NULL,
+Review_Count int NOT NULL);
