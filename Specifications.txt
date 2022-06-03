@@ -8,3 +8,7 @@ ID is the primary key.
 birthday default date is the CURRENT_DATE.
 
 Used JSONPATH in Review and Posts table.
+
+Accessing tables using heroku Client:
+- accessing the database: heroku pg:psql Derrp-io
+- showing all tables: \dt
