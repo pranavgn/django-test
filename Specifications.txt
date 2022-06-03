@@ -10,5 +10,5 @@ birthday default date is the CURRENT_DATE.
 Used JSONPATH in Review and Posts table.
 
 Accessing tables using heroku Client:
-- accessing the database: heroku pg:psql Derrp-io
+- accessing the database: heroku pg:psql -a derpp-io
 - showing all tables: \dt
