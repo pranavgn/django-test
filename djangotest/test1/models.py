@@ -2,7 +2,9 @@ from os import major
 from django.db import models
 
 # Create your models here.
-class user_details(models.model):
+
+# user details table
+class user_details(models.Model):
     user_id = models.BigIntegerField(primary_key=True)
     full_name = models.CharField(max_length=250)
     class year_in_college(models.IntegerChoices):
