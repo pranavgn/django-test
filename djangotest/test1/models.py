@@ -22,6 +22,8 @@ class user_details(models.Model):
     birthday = models.DateField()
     college_major = models.CharField(max_length=500)
     review_count = models.SmallIntegerField()
+
+# professor details
 class professor_details(models.Model):
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     professor_name = models.CharField(max_length=250)
