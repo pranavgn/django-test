@@ -3,10 +3,10 @@ from os import major
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+# default values
+DEFAULT_VAL = "no_user"
 
 # user details table
-
 class user_details(models.Model):
     user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=250)
@@ -35,7 +35,7 @@ class posts(models.Model):
     post_content = models.TextField()
     post_id = models.AutoField(primary_key=True)
     post_time = models.DateTimeField()
-    user_id = models.ForeignKey(User, on_delete=models.SET_NULL)
+    user_id = models.ForeignKey(User, default=DEFAULT_VAL, on_delete=models.SET_DEFAULT)
     posts_comments = models.JSONField()
     posts_likes = models.IntegerField(default=0)
     posts_dislikes = models.IntegerField(default=0)
@@ -44,7 +44,7 @@ class posts(models.Model):
 
 class review(models.Model):
     review_id = models.AutoField(primary_key=True)
-    user_id = models.OneToOneField(User, on_delete=models.SET_NULL)
+    user_id = models.OneToOneField(User, default=DEFAULT_VAL, on_delete=models.SET_DEFAULT)
     review_title = models.CharField(max_length=250)
     review_details = models.TextField()
     review_comments = models.JSONField()
