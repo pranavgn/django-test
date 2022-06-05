@@ -1,11 +1,12 @@
 from os import major
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 # user details table
 class user_details(models.Model):
-    user_id = models.BigIntegerField(primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=250)
     class year_in_college(models.IntegerChoices):
         FIRST_YEAR = 1
