@@ -16,3 +16,7 @@ Accessing tables using heroku Client:
 Steps to make changes to models
 First run: python3 manage.py makemigrations test1 on terminal(project name instead of test1)
 Second run: python3 manage.py migrate 
+
+git add .
+git commit -m "message"
+git push --force 
