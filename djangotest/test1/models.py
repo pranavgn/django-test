@@ -29,8 +29,8 @@ class user_details(models.Model):
     review_count = models.SmallIntegerField(blank=True)
     Avg_Rating = models.DecimalField(max_digits=3, decimal_places=2, blank=True, default= 1.0)
     Department = models.CharField(max_length=250, blank=True)
-    recent_posts = models.JSONField(blank=True)
-    recent_comments = models.JSONField(blank=True)
+    recent_posts = models.JSONField(blank=True, null=True)
+    recent_comments = models.JSONField(blank=True, null=True)
 
 class posts(models.Model):
     post_title = models.CharField(max_length=250)
