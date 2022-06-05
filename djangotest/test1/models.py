@@ -17,7 +17,15 @@ class user_details(models.Model):
         SIXTH_YEAR = 6
         MASTERS_DEGREE = 7
         PHD = 8
+        PROFESSOR = 9
     college_year = models.SmallIntegerField(choices=year_in_college.choices)
     birthday = models.DateField()
     college_major = models.CharField(max_length=500)
     review_count = models.SmallIntegerField()
+class professor_details(models.Model):
+    user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+    professor_name = models.CharField(max_length=250)
+    University_name = models.CharField(max_length=250)
+    Department = models.CharField(max_length=250)
+    Avg_Rating = models.DecimalField(max_digits=3, decimal_places=2)
+

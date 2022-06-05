@@ -12,3 +12,7 @@ Used JSONPATH in Review and Posts table.
 Accessing tables using heroku Client:
 - accessing the database: heroku pg:psql -a derpp-io
 - showing all tables: \dt
+
+Steps to make changes to models
+First run: python3 manage.py makemigrations test1 on terminal(project name instead of test1)
+Second run: python3 manage.py migrate 
