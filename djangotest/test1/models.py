@@ -41,6 +41,10 @@ class posts(models.Model):
     posts_dislikes = models.IntegerField(default=0)
     posts_report = models.CharField(max_length=250, blank = True)
     posts_report_description = models.TextField(blank=True)
+
+
+
+
 class review(models.Model):
     review_id = models.AutoField(primary_key=True)
     user_id = models.OneToOneField(User, on_delete=models.SET_NULL)
