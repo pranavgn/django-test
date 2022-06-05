@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 # user details table
 class user_details(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=250)
     class year_in_college(models.IntegerChoices):
         FIRST_YEAR = 1
